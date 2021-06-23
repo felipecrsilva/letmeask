@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-// import { useAuth } from "../hooks/UseAuth";
+// import { useAuth } from "../hooks/useAuth";
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
