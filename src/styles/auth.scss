@@ -61,6 +61,21 @@
             font-size: 24px;
             font-family: 'Poppins', sans-serif;
             margin: 64px 0 24px;
+
+            @media screen and (max-width: 315px) {
+                margin: 32px 0 12px;
+                font-size: 16px;
+            }
+        }
+
+        .title {
+            display: none;
+            margin-top: 16px;
+            font-family: 'Poppins', sans-serif;
+
+            @media screen and (max-width: 315px) {
+                font-size: 16px;
+            }
         }
 
         form {
@@ -151,6 +166,32 @@
             margin-left: 16px;
 
             background-color: #a8a8b3;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #page-auth {
+        aside {
+            display: none;
+        }
+
+        .main-content {
+            .title {
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 340px) {
+    #page-auth {
+        .main-content {
+            .create-room {
+                align-self: center;
+                width: 100%;
+                font-size: 14px;
+            }
         }
     }
 }

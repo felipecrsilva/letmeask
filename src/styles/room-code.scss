@@ -32,3 +32,29 @@
         font-weight: 500;
     }
 }
+
+@media screen and (max-width: 445px) {
+    .room-code {
+        span {
+            display: none;
+        }
+
+        div::after {
+            content: 'Copiar código';
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 100%;
+            width: 100%;
+
+            margin-left: 10px;
+            padding: 10px;
+
+            background-color: #FFF;
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}

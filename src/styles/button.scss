@@ -36,3 +36,9 @@
         cursor: not-allowed;
     }
 }
+
+@media screen and (max-width: 340px) {
+    .button {
+        font-size: 14px;
+    }
+}
