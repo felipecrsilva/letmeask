@@ -52,6 +52,12 @@ Remembering that you need to have a [Figma](http://figma.com/) account to access
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
+## Bônus
+
+- [ ] Responsive
+- [ ] Dark-mode
+- [ ] Rich-text editor
+- [ ] SignOut
 
 ---
 
