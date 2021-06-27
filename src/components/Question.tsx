@@ -3,8 +3,7 @@ import { ReactNode } from "react"
 import '../styles/components/question.scss';
 
 type QuestionProps = {
-    text: any;
-    content: string;
+    content: Object;
     author: {
         name: string;
         avatar: string;

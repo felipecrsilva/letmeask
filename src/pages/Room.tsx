@@ -100,11 +100,12 @@ export function Room() {
                         <button onClick={handleBold} type="button">
                             <strong>B</strong>
                         </button>
-                        <button onClick={handleItalic}>
+                        <button onClick={handleItalic} type="button">
                             <em>I</em>
                         </button>
                     </div>
                     <textarea 
+                      name="Question"
                       placeholder="O que você quer perguntar?"
                       onChange={event => setNewQuestion(event.target.value)}
                       value={newQuestion}
@@ -125,10 +126,12 @@ export function Room() {
 
                 <div className="question-list">
                     {questions.map(question => {
+                        const content = parse(question.content)
+
                         return (
                             <Question 
                               key={question.id}
-                              content={question.content}
+                              content={content}
                               author={question.author}
                               isAnswered={question.isAnswered}
                               isHighlighted={question.isHighlighted}
