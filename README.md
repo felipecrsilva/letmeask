@@ -54,10 +54,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) fi
 
 ## Bônus
 
-- [ ] Responsive
-- [ ] Dark-mode
-- [ ] Rich-text editor
-- [ ] SignOut
+- [x] Responsive
+- [x] Dark-mode
+- [x] Rich-text editor
+- [x] SignOut
 
 ---
 
