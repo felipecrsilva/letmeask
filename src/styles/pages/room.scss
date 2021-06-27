@@ -1,7 +1,23 @@
 #page-room {
+    height: 100vh;
+
+    &.light {
+        --background: #F8F8F8;
+        --header-border: #e2e2e2;
+        --text-color: #29292e;
+    }
+
+    &.dark {
+        --background: #121212;
+        --header-border: #171717;
+        --text-color: #FFFFFF;
+    }
+
+    background: var(--background);
+
     header {
         padding: 24px;
-        border-bottom: 1px solid #e2e2e2;
+        border-bottom: 1px solid var(--header-border);
 
         .content {
             display: flex;
@@ -39,7 +55,7 @@
             h1 {
                 font-family: 'Poppins', sans-serif;
                 font-size: 24px;
-                color: #29292e;
+                color: var(--text-color);
             }
 
             span {
@@ -47,13 +63,41 @@
                 background: #e559f9;
                 border-radius: 9999px;
                 padding: 8px 16px;
-                color: #fff;
+                color: var(--text-color);
                 font-weight: 500;
                 font-size: 14px;
+            }
+
+            button {
+                border: 0;
+                background: transparent;
+                font-size: 0;
+
+                svg {
+                    margin-left: 16px;
+                    fill: var(--text-color);
+                    cursor: pointer;
+                }
             }
         }
 
         form {
+            .buttons {
+                display: flex;
+                align-items: center;
+
+                gap: 10px;
+
+                margin-bottom: 5px;
+
+                button {
+                    width: 30px;
+                    height: 30px;
+    
+                    border: 1px solid var(--header-border);
+                }
+            }
+
             textarea {
                 width: 100%;
                 border: 0;
@@ -85,7 +129,7 @@
 
                     span {
                         margin-left: 8px;
-                        color: #29292e;
+                        color: var(--text-color);
                         font-weight: 500;
                         font-size: 14px;
                     }
@@ -149,6 +193,15 @@
             .content {
                 justify-content: space-around;
 
+                .logo {
+                    flex-direction: column;
+                    column-gap: 1px;
+
+                    img {
+                        max-height: 45px;
+                    }
+                }
+
                 > div {
                     flex-direction: column;
                     
@@ -169,6 +222,10 @@
             }
 
             form {
+                .buttons {
+                    margin: 0 0 5px 20px;
+                }
+
                 .form-footer {
                     margin-left: 20px;
                     margin-right: 20px;

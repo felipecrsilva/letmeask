@@ -2,18 +2,21 @@ import { FormEvent, useState } from "react"
 import { Link, useHistory } from "react-router-dom";
 
 import { useAuth } from "../hooks/useAuth";
+import { useTheme } from '../hooks/useTheme';
 
 import illustrationImg from '../assets/images/illustration.svg';
 import logoImg from '../assets/images/logo.svg';
 
 import { Button } from '../components/Button';
+import { Switch } from "../components/Switch";
 import { database } from "../services/firebase";
 
-import '../styles/auth.scss';
+import '../styles/pages/auth.scss';
 
 export function NewRoom() {
     const { user } = useAuth()
     const history = useHistory()
+    const { theme } = useTheme()
 
     const [newRoom, setNewRoom] = useState('')
 
@@ -35,7 +38,7 @@ export function NewRoom() {
     }
 
     return (
-        <div id="page-auth">
+        <div id="page-auth" className={theme}>
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas"/>
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
@@ -44,6 +47,7 @@ export function NewRoom() {
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
+                    <Switch />
                     <h2>Criar uma nova sala</h2>
                     <form onSubmit={handleCreateRoom}>
                         <input 

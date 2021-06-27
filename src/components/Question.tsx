@@ -1,8 +1,9 @@
 import { ReactNode } from "react"
 
-import '../styles/question.scss';
+import '../styles/components/question.scss';
 
 type QuestionProps = {
+    text: any;
     content: string;
     author: {
         name: string;

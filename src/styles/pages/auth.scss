@@ -4,6 +4,16 @@
 
     height: 100vh;
 
+    &.light {
+        --background: #F8F8F8;
+        --text-color: #29292e;
+    }
+
+    &.dark {
+        --background: #121212;
+        --text-color: #FFFFFF;
+    }
+    
     aside {
         display: flex;
         justify-content: center;
@@ -41,6 +51,8 @@
         flex: 8;
 
         padding: 0 32px;
+
+        background: var(--background);
     }
 
     .main-content {
@@ -61,6 +73,7 @@
             font-size: 24px;
             font-family: 'Poppins', sans-serif;
             margin: 64px 0 24px;
+            color: var(--text-color);
 
             @media screen and (max-width: 315px) {
                 margin: 32px 0 12px;
