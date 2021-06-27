@@ -1,4 +1,5 @@
-import { useHistory, useParams } from 'react-router-dom'
+import { useHistory, useParams } from 'react-router-dom';
+import parse from 'html-react-parser';
 
 import logoImg from '../assets/images/logo.svg';
 import deleteImg from '../assets/images/delete.svg';
@@ -81,10 +82,12 @@ export function AdminRoom() {
 
                 <div className="question-list">
                     {questions.map(question => {
+                        const content = parse(question.content)
+
                         return (
                             <Question 
                               key={question.id}
-                              content={question.content}
+                              content={content}
                               author={question.author}
                               isAnswered={question.isAnswered}
                               isHighlighted={question.isHighlighted}
